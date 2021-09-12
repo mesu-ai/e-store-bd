@@ -8,15 +8,17 @@ const loadProducts = () => {
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    const image = product.images;
+    console.log(product);
+    const image = product.image;
 
     const div = document.createElement("div");
 
     // div.classList.add("product");
     div.classList.add("col");
 
+
     div.innerHTML = `
-    <div class="card h-100 single-product">
+    <div class="card h-100 single-product card-style" style="background-color:rgb(200, 213, 221)">
       <div class="mx-auto">
         <img class="product-image" src=${image}>
       </div>
