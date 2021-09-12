@@ -10,10 +10,10 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     console.log(product);
     const image = product.image;
+    const productPrice = parseFloat(product.price);
+    // console.log(productPrice);
 
     const div = document.createElement("div");
-
-    // div.classList.add("product");
     div.classList.add("col");
 
 
@@ -35,16 +35,15 @@ const showProducts = (products) => {
       
       <button id="details-btn" class="btn btn-danger">Details</button>
         
-      </div>
-
-      
-      
+      </div> 
       </div>
       `;
 
     document.getElementById("all-products-d").appendChild(div);
   }
 };
+
+// add price display to cart
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -54,9 +53,10 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
+// previous price store
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
-  const converted = parseInt(element);
+  const converted = parseFloat(element);
   return converted;
 };
 
@@ -64,8 +64,9 @@ const getInputValue = (id) => {
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
-  const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = Math.round(total);
+  const total = parseFloat(convertedOldPrice + convertPrice);
+  //console.log(total);
+  document.getElementById(id).innerText = total.toFixed(2);
 };
 
 // set innerText function
