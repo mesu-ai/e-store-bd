@@ -21,8 +21,8 @@ const showProducts = () => {
 
 
     div.innerHTML = `
-    <div class="card h-100 single-product card-style" style="background-color:rgba(238, 233, 187, 0.986)">
-      <div class="mx-auto">
+    <div class="card h-100 single-product card-style" style="background-color:rgb(214, 252, 252)">
+      <div class="mx-auto bg-white p-2 rounded-3">
         <img class="product-image" src=${image}>
       </div>
 
