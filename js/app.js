@@ -27,9 +27,9 @@ const showProducts = () => {
       </div>
 
       <div class="card-body text-center">
-      <h3>${product.title}</h3>
+      <h5>${product.title}</h5>
       <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>   
+      <h3>Price: $ ${product.price}</h3>   
       </div>
 
       <div class="card-footer mx-auto">
