@@ -57,7 +57,7 @@ const showProducts = () => {
       </div>
       `;
 
-    document.getElementById("all-products-d").appendChild(div);
+    document.getElementById("all-products").appendChild(div);
 
   }
 };
