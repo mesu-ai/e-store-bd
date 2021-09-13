@@ -21,7 +21,7 @@ const showProducts = () => {
 
 
     div.innerHTML = `
-    <div class="card h-100 single-product card-style" style="background-color:rgb(200, 213, 221)">
+    <div class="card h-100 single-product card-style" style="background-color:rgba(238, 233, 187, 0.986)">
       <div class="mx-auto">
         <img class="product-image" src=${image}>
       </div>
@@ -29,19 +29,20 @@ const showProducts = () => {
       <div class="card-body text-center">
       <h5>${product.title}</h5>
       <p>Category: ${product.category}</p>
-      <h3>Price: $ ${product.price}</h3>
+      <h3>Price: $ <span style="color:tomato">${product.price}</span></h3>
       
-      <p ><span class="text-warning">
+          <div class="mt-4">
+             <p><span class="text-warning">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i></span>
-              <span class="fw-bold"> (${product.rating.count})</span>
+              <span class="fw-bold"> (${product.rating.rate})</span>
             </p>
-      <h5>Total Rate: ${product.rating.count}</h5>
-      
-      
+            <p>${product.rating.count} reviews</p>
+
+         </div>
       </div>
 
       <div class="card-footer mx-auto">
