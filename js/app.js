@@ -12,7 +12,7 @@ const showProducts = () => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
 
-    // console.log(product);
+    console.log(product);
     const image = product.image;
 
 
@@ -29,7 +29,19 @@ const showProducts = () => {
       <div class="card-body text-center">
       <h5>${product.title}</h5>
       <p>Category: ${product.category}</p>
-      <h3>Price: $ ${product.price}</h3>   
+      <h3>Price: $ ${product.price}</h3>
+      
+      <p ><span class="text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i></span>
+              <span class="fw-bold"> (${product.rating.count})</span>
+            </p>
+      <h5>Total Rate: ${product.rating.count}</h5>
+      
+      
       </div>
 
       <div class="card-footer mx-auto">
