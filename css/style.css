@@ -21,6 +21,10 @@ body {
   width: 150px;
   height: 150px;
 }
+.productDetails-image {
+  width: 250px;
+  height: 300px;
+}
 .cart {
   width: 350px;
   /* border: 1px solid green; */
